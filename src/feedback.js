@@ -239,7 +239,7 @@ export function updateFeedbacks() {
 				bgcolor: combineRgb(255, 255, 0),
 			},
 			callback: async ({ options }) => {
-				if (this.api.geSeat(options.seat).flash == options.choice) {
+				if (this.api.getSeat(options.seat).flash == options.choice) {
 					return true
 				} else {
 					return false
@@ -351,7 +351,7 @@ export function updateFeedbacks() {
 				bgcolor: combineRgb(255, 255, 0),
 			},
 			callback: async ({ options }) => {
-				if (this.api.geSeat(options.seat).micAgc == options.choice) {
+				if (this.api.getSeat(options.seat).micAgc == options.choice) {
 					return true
 				} else {
 					return false
@@ -367,7 +367,7 @@ export function updateFeedbacks() {
 				bgcolor: combineRgb(255, 255, 0),
 			},
 			callback: async ({ options }) => {
-				if (this.api.geSeat(options.seat).micGain == options.gain) {
+				if (this.api.getSeat(options.seat).micGain == options.gain) {
 					return true
 				} else {
 					return false
@@ -383,7 +383,7 @@ export function updateFeedbacks() {
 				bgcolor: combineRgb(255, 255, 0),
 			},
 			callback: async ({ options }) => {
-				if (this.api.geSeat(options.seat).micPriority == options.val) {
+				if (this.api.getSeat(options.seat).micPriority == options.val) {
 					return true
 				} else {
 					return false
@@ -399,7 +399,7 @@ export function updateFeedbacks() {
 				bgcolor: combineRgb(255, 255, 0),
 			},
 			callback: async ({ options }) => {
-				if (this.api.geSeat(options.seat).micStatus == options.choice) {
+				if (this.api.getSeat(options.seat).micStatus == options.choice) {
 					return true
 				} else {
 					return false
