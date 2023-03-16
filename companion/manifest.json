@@ -3,7 +3,7 @@
 	"name": "shure-mxcw",
 	"shortname": "shure-mxcw",
 	"description": "",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"license": "MIT",
 	"repository": "git+https://github.com/bitfocus/companion-module-shure-mxcw.git",
 	"bugs": "https://github.com/bitfocus/companion-module-shure-mxcw/issues",

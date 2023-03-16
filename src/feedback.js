@@ -390,6 +390,22 @@ export function updateFeedbacks() {
 				}
 			},
 		},
+		mic_status: {
+			type: 'boolean',
+			name: 'Check microphone status',
+			options: [this.SEATS_FIELD, Fields.OnOff],
+			defaultStyle: {
+				color: combineRgb(0, 0, 0),
+				bgcolor: combineRgb(255, 255, 0),
+			},
+			callback: async ({ options }) => {
+				if (this.api.geSeat(options.seat).micStatus == options.choice) {
+					return true
+				} else {
+					return false
+				}
+			},
+		},
 		operation_mode: {
 			type: 'boolean',
 			name: 'Check operation mode',
