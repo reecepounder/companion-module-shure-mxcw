@@ -1,0 +1,161 @@
+export const Choices = {
+	EnabledDisabled: [
+		{ id: 'ENABLED', label: 'Enabled' },
+		{ id: 'DISABLED', label: 'Disabled' },
+	],
+	InterruptMode: [
+		{ id: 'NOT_ALLOWED', label: 'Not Allowed' },
+		{ id: 'HIGHER_PRIORITY', label: 'Higher Priority' },
+		{ id: 'EQUAL_AND_HIGHER_PRIORITY', label: 'Equal and Higher Priority' },
+	],
+	ListStatus: [
+		{ id: 'IN_LIST', label: 'In List' },
+		{ id: 'NOT_IN_LIST', label: 'Not In List' },
+	],
+	OnOff: [
+		{ id: 'ON', label: 'On' },
+		{ id: 'OFF', label: 'Off' },
+	],
+	OperationMode: [
+		{ id: 'AUTO', label: 'Automatic' },
+		{ id: 'MANUAL', label: 'Manual' },
+		{ id: 'FIFO', label: 'First In-First Out' },
+		{ id: 'HANDSFREE', label: 'Hands Free' },
+	],
+	RfPower: [
+		{ id: 'OFF', label: 'Off' },
+		{ id: 'LOW', label: 'Low' },
+		{ id: 'MEDIUM', label: 'Medium' },
+		{ id: 'HIGH', label: 'High' },
+		{ id: 'MAXIMUM', label: 'Maximum' },
+	],
+	Role: [
+		{ id: 'DELEGATE', label: 'Delegate' },
+		{ id: 'CHAIRMAN', label: 'Chairman' },
+		{ id: 'LISTENER', label: 'Listener' },
+		{ id: 'AMBIENT', label: 'Ambient' },
+		{ id: 'REMOTE_CALLER', label: 'Remote Caller' },
+		{ id: 'DUAL_DELEGATE', label: 'Dual Delegate' },
+	],
+	UnitStatus: [
+		{ id: 'AVAILABLE', label: 'Available' },
+		{ id: 'OFFLINE', label: 'Offline' },
+		{ id: 'NOT_REGISTERED', label: 'Not Registered' },
+	],
+}
+
+export const Fields = {
+	Dante: {
+		type: 'number',
+		label: 'Channel',
+		id: 'ch',
+		min: 1,
+		max: 8,
+		default: 1,
+		required: true,
+	},
+	EnabledDisabled: {
+		type: 'dropdown',
+		label: 'Value',
+		id: 'choice',
+		default: 'ENABLED',
+		choices: Choices.EnabledDisabled,
+	},
+	GainSet: function (max) {
+		return {
+			type: 'number',
+			label: 'Gain Value (dB)',
+			id: 'gain',
+			min: -30,
+			max: max,
+			default: 0,
+			required: true,
+			range: true,
+		}
+	},
+	Id: {
+		type: 'textinput',
+		label: 'ID',
+		tooltip: '31 characters max',
+		id: 'id',
+		default: '',
+		regex: '/^.{1,31}$/',
+	},
+	InterruptMode: {
+		type: 'dropdown',
+		label: 'Value',
+		id: 'choice',
+		default: 'NOT_ALLOWED',
+		choices: Choices.InterruptMode,
+	},
+	ListStatus: {
+		type: 'dropdown',
+		label: 'Status',
+		id: 'choice',
+		default: 'IN_LIST',
+		choices: Choices.ListStatus,
+	},
+	MaxSet: function (max) {
+		return {
+			type: 'number',
+			label: 'Max',
+			id: 'val',
+			min: 1,
+			max: max,
+			default: 1,
+			required: true,
+		}
+	},
+	Name: {
+		type: 'textinput',
+		label: 'ID',
+		tooltip: '64 characters max',
+		id: 'id',
+		default: '',
+		regex: '/^.{1,64}$/',
+	},
+	OnOff: {
+		type: 'dropdown',
+		label: 'Value',
+		id: 'choice',
+		default: 'ON',
+		choices: Choices.OnOff,
+	},
+	OperationMode: {
+		type: 'dropdown',
+		label: 'Value',
+		id: 'choice',
+		default: 'AUTO',
+		choices: Choices.InterruptMode,
+	},
+	Priority: {
+		type: 'number',
+		label: 'Priority',
+		id: 'val',
+		min: 1,
+		max: 5,
+		default: 1,
+		required: true,
+	},
+	RfPower: {
+		type: 'dropdown',
+		label: 'Value',
+		id: 'choice',
+		default: 'ON',
+		choices: Choices.RfPower,
+	},
+	Role: {
+		type: 'dropdown',
+		label: 'Value',
+		id: 'choice',
+		default: 'ON',
+		choices: Choices.Role,
+	},
+	UnitStatus: {
+		type: 'dropdown',
+		label: 'Status',
+		id: 'choice',
+		default: 'AVAILABLE',
+		choices: Choices.UnitStatus,
+	},
+}

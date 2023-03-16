@@ -1,2 +1,3 @@
-# companion-module-[replace with module name]
-See [HELP.md](./HELP.md) and [LICENSE](./LICENSE)
+# companion-module-shure-mxcw
+
+See HELP.md and LICENSE for more information about this module.
