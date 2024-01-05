@@ -212,17 +212,17 @@ class ShureMxcwInstance extends InstanceBase {
 			this.socket.on('connect', () => {
 				this.log('debug', 'Connected')
 				let cmd = '< GET ALL >'
-				this.socket.send(cmd)
+				this.sendCommand(cmd)
 
 				if (this.config.meteringOn === true) {
 					cmd = `< SET AUDIO_METER_RATE ${this.config.meteringInterval} >`
-					this.socket.send(cmd)
+					this.sendCommand(cmd)
 					cmd = `< SET RF_METER_RATE ${this.config.meteringInterval} >`
-					this.socket.send(cmd)
+					this.sendCommand(cmd)
 				}
 
 				this.heartbeatInterval = setInterval(() => {
-					this.socket.send('< GET AUDIO_METER_RATE >')
+					this.sendCommand('< GET AUDIO_METER_RATE >')
 				}, 30000)
 			})
 
