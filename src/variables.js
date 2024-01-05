@@ -4,32 +4,32 @@ import { iterate, parse } from 'multi-integer-range'
  * INTERNAL: initialize variables.
  */
 export function updateVariables() {
-	let variables = []
+	let variables = [
+		{ variableId: 'audio_input_speaklist', name: 'Audio Input Speak List' },
+		{ variableId: 'audio_meter_rate', name: 'Audio Meter Rate' },
+		{ variableId: 'device_id', name: 'Device ID' },
+		{ variableId: 'flash', name: 'Flash' },
+		{ variableId: 'global_mute', name: 'Global Mute' },
+		{ variableId: 'interrupt_mode', name: 'Interrupt Mode' },
+		{ variableId: 'loudspeaker_volume', name: 'Loudspeaker Volume' },
+		{ variableId: 'max_delegate_speakers', name: 'Max Delegate Speakers' },
+		{ variableId: 'max_num_requests', name: 'Max Num Requests' },
+		{ variableId: 'max_total_speakers', name: 'Max Total Speakers' },
+		{ variableId: 'model', name: 'Model' },
+		{ variableId: 'operation_mode', name: 'Operation Mode' },
+		{ variableId: 'retain_seat_persistence', name: 'Retain Seat Persistence' },
+		{ variableId: 'rf_meter_rate', name: 'RF Meter Rate' },
+		{ variableId: 'rf_power', name: 'RF Power' },
+		{ variableId: 'wdu_lock_welcome', name: 'WDU Lock Welcome' },
 
-	variables.push({ variableId: 'audio_input_speaklist', name: 'Audio Input Speak List' })
-	variables.push({ variableId: 'audio_meter_rate', name: 'Audio Meter Rate' })
-	variables.push({ variableId: 'device_id', name: 'Device ID' })
-	variables.push({ variableId: 'flash', name: 'Flash' })
-	variables.push({ variableId: 'global_mute', name: 'Global Mute' })
-	variables.push({ variableId: 'interrupt_mode', name: 'Interrupt Mode' })
-	variables.push({ variableId: 'loudspeaker_volume', name: 'Loudspeaker Volume' })
-	variables.push({ variableId: 'max_delegate_speakers', name: 'Max Delegate Speakers' })
-	variables.push({ variableId: 'max_num_requests', name: 'Max Num Requests' })
-	variables.push({ variableId: 'max_total_speakers', name: 'Max Total Speakers' })
-	variables.push({ variableId: 'model', name: 'Model' })
-	variables.push({ variableId: 'operation_mode', name: 'Operation Mode' })
-	variables.push({ variableId: 'retain_seat_persistence', name: 'Retain Seat Persistence' })
-	variables.push({ variableId: 'rf_meter_rate', name: 'RF Meter Rate' })
-	variables.push({ variableId: 'rf_power', name: 'RF Power' })
-	variables.push({ variableId: 'wdu_lock_welcome', name: 'WDU Lock Welcome' })
+		{ variableId: 'aux_input_agc', name: 'Aux Input AGC' },
+		{ variableId: 'aux_input_gain', name: 'Aux Input Gain' },
+		{ variableId: 'aux_input_mute', name: 'Aux Input Mute' },
+		{ variableId: 'aux_input_pad', name: 'Aux Input Pad' },
 
-	variables.push({ variableId: 'aux_input_agc', name: 'Aux Input AGC' })
-	variables.push({ variableId: 'aux_input_gain', name: 'Aux Input Gain' })
-	variables.push({ variableId: 'aux_input_mute', name: 'Aux Input Mute' })
-	variables.push({ variableId: 'aux_input_pad', name: 'Aux Input Pad' })
-
-	variables.push({ variableId: 'aux_output_gain', name: 'Aux Output Gain' })
-	variables.push({ variableId: 'aux_output_mute', name: 'Aux Output Mute' })
+		{ variableId: 'aux_output_gain', name: 'Aux Output Gain' },
+		{ variableId: 'aux_output_mute', name: 'Aux Output Mute' },
+	]
 
 	for (let i = 1; i <= 8; i++) {
 		variables.push({ variableId: `dante_input_${i}_agc`, name: `Dante Input ${i} AGC` })

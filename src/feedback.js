@@ -15,11 +15,7 @@ export function updateFeedbacks() {
 				bgcolor: combineRgb(255, 255, 0),
 			},
 			callback: async ({ options }) => {
-				if (this.api.getReceiver().audioInputSpeaklist == options.choice) {
-					return true
-				} else {
-					return false
-				}
+				return this.api.getReceiver().audioInputSpeaklist == options.choice
 			},
 		},
 		aux_input_agc: {
@@ -31,11 +27,7 @@ export function updateFeedbacks() {
 				bgcolor: combineRgb(255, 255, 0),
 			},
 			callback: async ({ options }) => {
-				if (this.api.getAuxInput(1).agc == options.choice) {
-					return true
-				} else {
-					return false
-				}
+				return this.api.getAuxInput(1).agc == options.choice
 			},
 		},
 		aux_input_gain: {
@@ -47,11 +39,7 @@ export function updateFeedbacks() {
 				bgcolor: combineRgb(255, 255, 0),
 			},
 			callback: async ({ options }) => {
-				if (this.api.getAuxInput(1).gain == options.gain) {
-					return true
-				} else {
-					return false
-				}
+				return this.api.getAuxInput(1).gain == options.gain
 			},
 		},
 		aux_input_mute: {
@@ -63,11 +51,7 @@ export function updateFeedbacks() {
 				bgcolor: combineRgb(255, 255, 0),
 			},
 			callback: async ({ options }) => {
-				if (this.api.getAuxInput(1).mute == options.choice) {
-					return true
-				} else {
-					return false
-				}
+				return this.api.getAuxInput(1).mute == options.choice
 			},
 		},
 		aux_input_pad: {
@@ -79,11 +63,7 @@ export function updateFeedbacks() {
 				bgcolor: combineRgb(255, 255, 0),
 			},
 			callback: async ({ options }) => {
-				if (this.api.getAuxInput(1).pad == options.choice) {
-					return true
-				} else {
-					return false
-				}
+				return this.api.getAuxInput(1).pad == options.choice
 			},
 		},
 		aux_output_gain: {
@@ -95,11 +75,7 @@ export function updateFeedbacks() {
 				bgcolor: combineRgb(255, 255, 0),
 			},
 			callback: async ({ options }) => {
-				if (this.api.getAuxOutput(1).gain == options.gain) {
-					return true
-				} else {
-					return false
-				}
+				return this.api.getAuxOutput(1).gain == options.gain
 			},
 		},
 		aux_output_mute: {
@@ -111,11 +87,7 @@ export function updateFeedbacks() {
 				bgcolor: combineRgb(255, 255, 0),
 			},
 			callback: async ({ options }) => {
-				if (this.api.getAuxOutput(1).mute == options.choice) {
-					return true
-				} else {
-					return false
-				}
+				return this.api.getAuxOutput(1).mute == options.choice
 			},
 		},
 		dante_input_agc: {
@@ -127,11 +99,7 @@ export function updateFeedbacks() {
 				bgcolor: combineRgb(255, 255, 0),
 			},
 			callback: async ({ options }) => {
-				if (this.api.getDanteInput(options.ch).agc == options.choice) {
-					return true
-				} else {
-					return false
-				}
+				return this.api.getDanteInput(options.ch).agc == options.choice
 			},
 		},
 		dante_input_gain: {
@@ -143,11 +111,7 @@ export function updateFeedbacks() {
 				bgcolor: combineRgb(255, 255, 0),
 			},
 			callback: async ({ options }) => {
-				if (this.api.getDanteInput(options.ch).gain == options.gain) {
-					return true
-				} else {
-					return false
-				}
+				return this.api.getDanteInput(options.ch).gain == options.gain
 			},
 		},
 		dante_input_mute: {
@@ -159,11 +123,7 @@ export function updateFeedbacks() {
 				bgcolor: combineRgb(255, 255, 0),
 			},
 			callback: async ({ options }) => {
-				if (this.api.getDanteInput(options.ch).mute == options.choice) {
-					return true
-				} else {
-					return false
-				}
+				return this.api.getDanteInput(options.ch).mute == options.choice
 			},
 		},
 		dante_output_gain: {
@@ -175,11 +135,7 @@ export function updateFeedbacks() {
 				bgcolor: combineRgb(255, 255, 0),
 			},
 			callback: async ({ options }) => {
-				if (this.api.getDanteOutput(options.ch).gain == options.gain) {
-					return true
-				} else {
-					return false
-				}
+				return this.api.getDanteOutput(options.ch).gain == options.gain
 			},
 		},
 		dante_output_mute: {
@@ -191,11 +147,7 @@ export function updateFeedbacks() {
 				bgcolor: combineRgb(255, 255, 0),
 			},
 			callback: async ({ options }) => {
-				if (this.api.getDanteOutput(options.ch).mute == options.choice) {
-					return true
-				} else {
-					return false
-				}
+				return this.api.getDanteOutput(options.ch).mute == options.choice
 			},
 		},
 		exclusive_mute: {
@@ -207,11 +159,7 @@ export function updateFeedbacks() {
 				bgcolor: combineRgb(255, 255, 0),
 			},
 			callback: async ({ options }) => {
-				if (this.api.getSeat(options.seat).exclusiveMute == options.choice) {
-					return true
-				} else {
-					return false
-				}
+				return this.api.getSeat(options.seat).exclusiveMute == options.choice
 			},
 		},
 		flash_apt: {
@@ -223,11 +171,7 @@ export function updateFeedbacks() {
 				bgcolor: combineRgb(255, 255, 0),
 			},
 			callback: async ({ options }) => {
-				if (this.api.getReceiver().flash == options.choice) {
-					return true
-				} else {
-					return false
-				}
+				return this.api.getReceiver().flash == options.choice
 			},
 		},
 		flash_seat: {
@@ -239,11 +183,7 @@ export function updateFeedbacks() {
 				bgcolor: combineRgb(255, 255, 0),
 			},
 			callback: async ({ options }) => {
-				if (this.api.getSeat(options.seat).flash == options.choice) {
-					return true
-				} else {
-					return false
-				}
+				return this.api.getSeat(options.seat).flash == options.choice
 			},
 		},
 		global_mute: {
@@ -255,11 +195,7 @@ export function updateFeedbacks() {
 				bgcolor: combineRgb(255, 255, 0),
 			},
 			callback: async ({ options }) => {
-				if (this.api.getReceiver().globalMute == options.choice) {
-					return true
-				} else {
-					return false
-				}
+				return this.api.getReceiver().globalMute == options.choice
 			},
 		},
 		interrupt_mode: {
@@ -271,11 +207,7 @@ export function updateFeedbacks() {
 				bgcolor: combineRgb(255, 255, 0),
 			},
 			callback: async ({ options }) => {
-				if (this.api.getReceiver().interruptMode == options.choice) {
-					return true
-				} else {
-					return false
-				}
+				return this.api.getReceiver().interruptMode == options.choice
 			},
 		},
 		loudspeaker_volume: {
@@ -287,11 +219,7 @@ export function updateFeedbacks() {
 				bgcolor: combineRgb(255, 255, 0),
 			},
 			callback: async ({ options }) => {
-				if (this.api.getReceiver().loudspeakerVolume == options.gain) {
-					return true
-				} else {
-					return false
-				}
+				return this.api.getReceiver().loudspeakerVolume == options.gain
 			},
 		},
 		max_delegate_speakers: {
@@ -303,11 +231,7 @@ export function updateFeedbacks() {
 				bgcolor: combineRgb(255, 255, 0),
 			},
 			callback: async ({ options }) => {
-				if (this.api.getReceiver().maxDelegateSpeakers == options.val) {
-					return true
-				} else {
-					return false
-				}
+				return this.api.getReceiver().maxDelegateSpeakers == options.val
 			},
 		},
 		max_num_requests: {
@@ -319,11 +243,7 @@ export function updateFeedbacks() {
 				bgcolor: combineRgb(255, 255, 0),
 			},
 			callback: async ({ options }) => {
-				if (this.api.getReceiver().maxNumRequests == options.val) {
-					return true
-				} else {
-					return false
-				}
+				return this.api.getReceiver().maxNumRequests == options.val
 			},
 		},
 		max_total_speakers: {
@@ -335,11 +255,7 @@ export function updateFeedbacks() {
 				bgcolor: combineRgb(255, 255, 0),
 			},
 			callback: async ({ options }) => {
-				if (this.api.getReceiver().maxTotalSpeakers == options.val) {
-					return true
-				} else {
-					return false
-				}
+				return this.api.getReceiver().maxTotalSpeakers == options.val
 			},
 		},
 		mic_agc: {
@@ -351,11 +267,7 @@ export function updateFeedbacks() {
 				bgcolor: combineRgb(255, 255, 0),
 			},
 			callback: async ({ options }) => {
-				if (this.api.getSeat(options.seat).micAgc == options.choice) {
-					return true
-				} else {
-					return false
-				}
+				return this.api.getSeat(options.seat).micAgc == options.choice
 			},
 		},
 		mic_gain: {
@@ -367,11 +279,7 @@ export function updateFeedbacks() {
 				bgcolor: combineRgb(255, 255, 0),
 			},
 			callback: async ({ options }) => {
-				if (this.api.getSeat(options.seat).micGain == options.gain) {
-					return true
-				} else {
-					return false
-				}
+				return this.api.getSeat(options.seat).micGain == options.gain
 			},
 		},
 		mic_priority: {
@@ -383,11 +291,7 @@ export function updateFeedbacks() {
 				bgcolor: combineRgb(255, 255, 0),
 			},
 			callback: async ({ options }) => {
-				if (this.api.getSeat(options.seat).micPriority == options.val) {
-					return true
-				} else {
-					return false
-				}
+				return this.api.getSeat(options.seat).micPriority == options.val
 			},
 		},
 		mic_status: {
@@ -399,11 +303,7 @@ export function updateFeedbacks() {
 				bgcolor: combineRgb(255, 255, 0),
 			},
 			callback: async ({ options }) => {
-				if (this.api.getSeat(options.seat).micStatus == options.choice) {
-					return true
-				} else {
-					return false
-				}
+				return this.api.getSeat(options.seat).micStatus == options.choice
 			},
 		},
 		operation_mode: {
@@ -415,11 +315,7 @@ export function updateFeedbacks() {
 				bgcolor: combineRgb(255, 255, 0),
 			},
 			callback: async ({ options }) => {
-				if (this.api.getReceiver().operationMode == options.choice) {
-					return true
-				} else {
-					return false
-				}
+				return this.api.getReceiver().operationMode == options.choice
 			},
 		},
 		request_list_status: {
@@ -431,11 +327,7 @@ export function updateFeedbacks() {
 				bgcolor: combineRgb(255, 255, 0),
 			},
 			callback: async ({ options }) => {
-				if (this.api.getSeat(options.seat).requestListStatus == options.choice) {
-					return true
-				} else {
-					return false
-				}
+				return this.api.getSeat(options.seat).requestListStatus == options.choice
 			},
 		},
 		retain_seat_persistence: {
@@ -447,11 +339,7 @@ export function updateFeedbacks() {
 				bgcolor: combineRgb(255, 255, 0),
 			},
 			callback: async ({ options }) => {
-				if (this.api.getReceiver().retainSeatPersistence == options.choice) {
-					return true
-				} else {
-					return false
-				}
+				return this.api.getReceiver().retainSeatPersistence == options.choice
 			},
 		},
 		rf_power: {
@@ -463,11 +351,7 @@ export function updateFeedbacks() {
 				bgcolor: combineRgb(255, 255, 0),
 			},
 			callback: async ({ options }) => {
-				if (this.api.getReceiver().rfPower == options.choice) {
-					return true
-				} else {
-					return false
-				}
+				return this.api.getReceiver().rfPower == options.choice
 			},
 		},
 		role: {
@@ -479,11 +363,7 @@ export function updateFeedbacks() {
 				bgcolor: combineRgb(255, 255, 0),
 			},
 			callback: async ({ options }) => {
-				if (this.api.getSeat(options.seat).role == options.choice) {
-					return true
-				} else {
-					return false
-				}
+				return this.api.getSeat(options.seat).role == options.choice
 			},
 		},
 		speak_list_status: {
@@ -495,11 +375,7 @@ export function updateFeedbacks() {
 				bgcolor: combineRgb(255, 255, 0),
 			},
 			callback: async ({ options }) => {
-				if (this.api.getSeat(options.seat).speakListStatus == options.choice) {
-					return true
-				} else {
-					return false
-				}
+				return this.api.getSeat(options.seat).speakListStatus == options.choice
 			},
 		},
 		unit_available: {
@@ -511,11 +387,7 @@ export function updateFeedbacks() {
 				bgcolor: combineRgb(255, 255, 0),
 			},
 			callback: async ({ options }) => {
-				if (this.api.getSeat(options.seat).unitAvailable == options.choice) {
-					return true
-				} else {
-					return false
-				}
+				return this.api.getSeat(options.seat).unitAvailable == options.choice
 			},
 		},
 		wdu_lock_welcome: {
@@ -527,11 +399,7 @@ export function updateFeedbacks() {
 				bgcolor: combineRgb(255, 255, 0),
 			},
 			callback: async ({ options }) => {
-				if (this.api.getReceiver().wduLockWelcome == options.choice) {
-					return true
-				} else {
-					return false
-				}
+				return this.api.getReceiver().wduLockWelcome == options.choice
 			},
 		},
 	})

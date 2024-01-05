@@ -241,7 +241,7 @@ export function updateActions() {
 		},
 		role: {
 			name: 'Set role for device',
-			options: [this.SEATS_A_FIELD, Fields.RfPower],
+			options: [this.SEATS_A_FIELD, Fields.Role],
 			callback: async ({ options }) => {
 				this.sendCommand(`SET ${options.seat} ROLE ${options.choice}`)
 			},
