@@ -126,7 +126,7 @@ export const Fields = {
 		label: 'Value',
 		id: 'choice',
 		default: 'AUTO',
-		choices: Choices.InterruptMode,
+		choices: Choices.OperationMode,
 	},
 	Priority: {
 		type: 'number',

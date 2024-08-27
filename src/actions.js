@@ -191,7 +191,6 @@ export function updateActions() {
 			name: 'Set microphone AGC',
 			options: [this.SEATS_A_FIELD, Fields.OnOff],
 			callback: async ({ options }) => {
-				l
 				this.sendCommand(`SET ${options.seat} MIC_AGC ${options.choice}`)
 			},
 		},
@@ -207,8 +206,14 @@ export function updateActions() {
 			name: 'Set microphone priority',
 			options: [this.SEATS_A_FIELD, Fields.Priority],
 			callback: async ({ options }) => {
-				l
 				this.sendCommand(`SET ${options.seat} MIC_PRIORITY ${options.val}`)
+			},
+		},
+		mic_status: {
+			name: 'Set microphone status',
+			options: [this.SEATS_A_FIELD, Fields.OnOff],
+			callback: async ({ options }) => {
+				this.sendCommand(`SET ${options.seat} MIC_STATUS ${options.choice}`)
 			},
 		},
 		next_mic_on: {
