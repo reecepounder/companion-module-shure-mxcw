@@ -79,6 +79,20 @@ export function updateActions() {
 				this.sendCommand(`SET CLEAR_REQUEST_LIST TRUE`)
 			},
 		},
+		close_voting_results: {
+            name: 'Close Voting Results',
+            options: [],
+            callback: async () => {
+                this.sendCommand(`SET CLOSE_VOTING_RESULTS TRUE`)
+            },
+        },
+		complete_vote: {
+            name: 'Complete Voting Session',
+            options: [],
+            callback: async () => {
+                this.sendCommand(`SET COMPLETE_VOTE TRUE`)
+            },
+        },
 		dante_input_agc: {
 			name: 'Set Dante input AGC',
 			options: [Fields.Dante, Fields.OnOff],
@@ -259,6 +273,21 @@ export function updateActions() {
 				this.sendCommand(`SET ${options.seat} SEAT_NAME {${options.id}}`)
 			},
 		},
+		start_vote: {
+            name: 'Start Voting',
+            options: [
+                {
+                    type: 'number',
+                    label: 'Voting Mode ID', // could improve this by adding a dropdown with the available voting modes - pull from < GET n VOTING_CONFIGURATION_NAME >
+                    id: 'voteNumber',
+                    min: 0,
+                    required: true,
+                },
+            ],
+            callback: async ({ options }) => {
+                this.sendCommand(`SET START_VOTE ${options.voteNumber}`)
+            },
+        },
 		wdu_lock_welcome: {
 			name: 'Set welcome screen lock status',
 			options: [Fields.EnabledDisabled],

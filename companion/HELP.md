@@ -41,6 +41,9 @@ This module will connect to the Shure MXCWAPT to provide feedback status as well
 - Turn on flash to identify APT
 - Turn on flash to identify a seat
 - Turn next microphone in request list on
+- Start voting session
+- Complete voting session
+- Clear voting results screen
 
 ### Available feedbacks/triggers
 
